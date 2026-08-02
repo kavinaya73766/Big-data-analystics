@@ -1,4 +1,4 @@
-## Superstore sales data analystics
+# Superstore sales data analystics
 
 # Project Overview
 This project analyzes the SuperStore sales dataset using Python. The objective is to explore sales performance, customer behavior, product categories, and regional trends through data cleaning, exploratory data analysis (EDA), and data visualization.
