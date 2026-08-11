@@ -112,6 +112,7 @@ Study the distribution of sales and profit.
 Analyze the relationship between discount and profit.
 Generate a correlation matrix and heatmap.
 Visualize important business insights using graphs.
+
 ## Technologies Used
 Python
 Pandas
@@ -120,6 +121,7 @@ Matplotlib
 Seaborn
 Google Colab
 Jupyter Notebook
+
 ## Dataset
 Dataset: Sample Superstore Dataset
 
@@ -132,6 +134,7 @@ Sales
 Profit
 Discount
 Other numerical and categorical attributes
+
 ## Data Preprocessing
 The following preprocessing steps were performed:
 
@@ -142,6 +145,7 @@ Converted Order Date and Ship Date into datetime format.
 Calculated Delivery Days using the difference between shipping and order dates.
 Checked unique values in the Category column.
 Checked for missing values.
+
 ## Exploratory Data Analysis
 1. Sales by Category
 Total sales were calculated by grouping the data based on Category.
@@ -182,6 +186,33 @@ Profit Distribution Box Plot
 Profit Variation Across Categories
 Discount vs Profit Scatter Plot
 Correlation Heatmap
+
+
+## Sales by Category
+<img width="1011" height="708" alt="image" src="https://github.com/user-attachments/assets/5d9271e1-f1b5-48c5-9cbf-92ad10e3f4ad" />
+
+## Sales Distribution Histogram
+<img width="1027" height="606" alt="image" src="https://github.com/user-attachments/assets/754b3167-59f2-48cc-b59b-3791ca2565a7" />
+
+## Profit by category
+<img width="842" height="585" alt="image" src="https://github.com/user-attachments/assets/f5f09757-a149-4bd3-b1c4-23e0aa6f9823" />
+
+## Sales Distribution by category
+<img width="765" height="590" alt="image" src="https://github.com/user-attachments/assets/b68d1514-36f8-4edf-87a5-7a6196b22b8c" />
+
+## Profit Distribution
+<img width="887" height="533" alt="image" src="https://github.com/user-attachments/assets/49fe2813-4246-456a-870e-1db9fff91b4b" />
+
+## Profit variation Across Categories
+<img width="840" height="583" alt="image" src="https://github.com/user-attachments/assets/7b11af53-b512-4cb2-8257-c65fb35d7336" />
+
+## Discount vs profit Scatter plot
+<img width="813" height="580" alt="image" src="https://github.com/user-attachments/assets/7d4249c9-f8f3-411c-ad2c-8fb05841d554" />
+
+## Correlation Heatmap
+<img width="773" height="657" alt="image" src="https://github.com/user-attachments/assets/f9298e53-a4e3-4a82-bed0-e7b3e7419965" />
+
+
 ## Key Analysis Areas
 The analysis focuses on:
 
@@ -202,12 +233,14 @@ Number of days between order and shipping
 Correlation Analysis
 
 Relationships among numerical variables
+
 ## Project Structure
 Task-2-BD/
 │
 ├── Task_2_BD.ipynb
 ├── task_2_bd.py
 └── README.md
+
 ## How to Run
 Using Google Colab
 Open Task_2_BD.ipynb.
