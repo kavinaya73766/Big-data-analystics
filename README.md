@@ -95,6 +95,7 @@ Develop a sales forecasting model.
 Perform customer segmentation using machine learning.
 Deploy the project as a web application.
 
+---
 # Task 2 – Big Data Analysis
 ## Project Overview
 This project focuses on performing data analysis and exploratory data visualization using the Sample Superstore dataset.
