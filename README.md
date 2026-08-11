@@ -175,6 +175,23 @@ Numerical columns were selected and a correlation matrix was calculated.
 
 A heatmap was then generated to visualize the correlations between numerical variables.
 
+
+## Exploratory Data Analysis
+
+### Importing Libraries
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+This cell imports the required Python libraries for data analysis and visualization.
+Pandas is used for data manipulation, NumPy is used for numerical operations,
+Matplotlib is used for creating graphs, and Seaborn is used for statistical visualization.
+
+
+
 ## Visualizations
 The project includes the following visualizations:
 
