@@ -140,12 +140,12 @@ Other numerical and categorical attributes
 ## Exploratory Data Analysis
 ##  Import Libraries
 
-
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
+```
 
 *Purpose:* Imports libraries required for data analysis and visualization.
 
@@ -153,12 +153,15 @@ import seaborn as sns
 
 ##  Load Dataset
 
+```python
 python
 from google.colab import drive
 drive.mount('/content/drive')
+```
 
+```python
 df = pd.read_csv("/content/drive/MyDrive/BIG DATA /SuperStore.csv.csv")
-
+```
 
 *Purpose:* Connects Google Drive and loads the SuperStore dataset into a DataFrame.
 
@@ -166,17 +169,23 @@ df = pd.read_csv("/content/drive/MyDrive/BIG DATA /SuperStore.csv.csv")
 
 ## Initial Data Exploration
 
+```python
 ### df.head()
+```
 
 Displays the first 5 rows to understand the dataset structure.
 
+```python
 ### df.info()
+```
 
 Checks rows, columns, data types, and non-null values.
 
 *Result:* Dataset contains *1000 records and 26 columns*.
 
+```python
 ### df.describe()
+```
 
 Provides statistical information such as mean, minimum, maximum, and standard deviation.
 
@@ -184,10 +193,11 @@ Provides statistical information such as mean, minimum, maximum, and standard de
 
 ##  Date Conversion
 
+```python
 python
 df['Order Date'] = pd.to_datetime(df['Order Date'])
 df['Ship Date'] = pd.to_datetime(df['Ship Date'])
-
+```
 
 *Purpose:* Converts date columns into datetime format for date calculations.
 
@@ -195,11 +205,12 @@ df['Ship Date'] = pd.to_datetime(df['Ship Date'])
 
 ##  Delivery Days
 
+```python
 python
 df['Delivery Days'] = (
     df['Ship Date'] - df['Order Date']
 ).dt.days
-
+```
 
 *Purpose:* Calculates the number of days taken to ship each order.
 
@@ -209,9 +220,10 @@ A new column called *Delivery Days* is added.
 
 ##  Missing Value Check
 
+```python
 python
 df.isnull().sum()
-
+```
 
 *Purpose:* Checks for missing values.
 
@@ -223,13 +235,14 @@ df.isnull().sum()
 
 ## A. Sales by Category – Bar Plot
 
+```python
 python
 category_sales = df.groupby(
     'Category'
 )['Sales Amount'].sum()
 
 category_sales.plot(kind='bar')
-
+```
 
 *Purpose:* Compares total sales between product categories.
 
@@ -245,9 +258,10 @@ category_sales.plot(kind='bar')
 
 ## B. Sales Distribution – Histogram
 
+```python
 python
 sns.histplot(df['Sales Amount'], bins=30)
-
+```
 
 *Purpose:* Shows how sales values are distributed.
 
@@ -261,13 +275,14 @@ Most orders are concentrated in the lower-to-middle sales ranges, while a smalle
 
 ## C. Profit by Category – Bar Plot
 
+```python
 python
 sns.barplot(
     data=df,
     x="Category",
     y="Profit"
 )
-
+```
 
 *Purpose:* Compares the average profit across categories.
 
@@ -281,13 +296,14 @@ The graph shows differences in average profit between product categories.
 
 ## D. Sales by Category – Bar Plot
 
+```python
 python
 sns.barplot(
     data=df,
     x="Category",
     y="Sales"
 )
-
+```
 
 *Purpose:* Compares sales values across categories.
 
@@ -301,9 +317,11 @@ The categories show similar sales performance, with Office Supplies performing s
 
 ## E. Profit Distribution – Box Plot
 
+```python
 python
 sns.boxplot(data=df, y="Profit")
 
+```
 
 *Purpose:* Understands the overall distribution of profit.
 
@@ -317,13 +335,14 @@ The box plot shows the median, spread, and possible high-profit outliers.
 
 ## F. Profit Variation Across Categories – Box Plot
 
+```python
 python
 sns.boxplot(
     data=df,
     x="Category",
     y="Profit"
 )
-
+```
 
 *Purpose:* Compares profit variation between categories.
 
@@ -337,9 +356,10 @@ The categories have different median profits and profit spreads. Some categories
 
 ## G. Discount Values
 
+```python
 python
 df["Discount (%)"].unique()
-
+```
 
 *Result:*
 
@@ -353,13 +373,14 @@ text
 
 ## H. Discount vs Profit – Scatter Plot
 
+```python
 python
 sns.scatterplot(
     data=df,
     x="Discount (%)",
     y="Profit"
 )
-
+```
 
 *Purpose:* Studies the relationship between discount and profit.
 
@@ -377,9 +398,10 @@ The correlation is approximately *-0.080*.
 
 ## Selecting Numerical Columns
 
+```python
 python
 numeric_df = df.select_dtypes(include="number")
-
+```
 
 *Purpose:* Selects numerical columns for correlation analysis.
 
@@ -387,9 +409,10 @@ numeric_df = df.select_dtypes(include="number")
 
 ## Correlation Matrix
 
+```python
 python
 corr = numeric_df.corr()
-
+```
 
 *Purpose:* Measures relationships between numerical variables.
 
@@ -408,9 +431,10 @@ corr = numeric_df.corr()
 
 #  Correlation Heatmap
 
+```python
 python
 sns.heatmap(corr, annot=True)
-
+```
 
 *Purpose:* Displays all numerical correlations visually.
 
