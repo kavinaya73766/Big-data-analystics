@@ -140,7 +140,7 @@ Other numerical and categorical attributes
 ## Exploratory Data Analysis
 ##  Import Libraries
 
-python
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
